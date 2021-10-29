@@ -23,11 +23,11 @@ public class Player
     {
         if (instance != null)
         {
-            Destroy(gameObject);
+            // Destroy(this.GameObject);
             return;
         }
         instance = this;
 
-        animationPlayer = GetComponent<AnimationPlayer>();
+        // animationPlayer = GetComponent<AnimationPlayer>();
     }
 }
