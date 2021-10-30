@@ -18,6 +18,6 @@ public class ChoiceButton : MonoBehaviour
 
     public void OnClick()
     {
-        UIManager.Instance.OnClickChoiceButton(choice.choiceidx);
+        UiManager.Instance.OnClickChoiceButton(choice.choiceidx);
     }
 }

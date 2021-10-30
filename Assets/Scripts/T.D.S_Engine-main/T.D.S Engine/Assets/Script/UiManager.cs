@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class UIManager : MonoBehaviour
+public class UiManager : MonoBehaviour
 {
   public Image background;
   public Image characterImage;
@@ -18,7 +18,7 @@ public class UIManager : MonoBehaviour
   public List<ChoiceButton> choiceButton;
   public Image descriptionImage;
   public TextTyper textTyper;
-  public static UIManager Instance;
+  public static UiManager Instance;
   private CharacterInfo _characterInfo;
   [SerializeField] [Range(0, 1)] public float typingSpeed;
   public DialogueHandler dialogueHandler;
@@ -35,6 +35,8 @@ public class UIManager : MonoBehaviour
       Instance = this;
     else
       Destroy (gameObject);
+
+        dialogueHandler.startDialogue(characterInfo);
   }
   
   //cet fonction gère uniquement l'affichage du dialogue

@@ -20,19 +20,19 @@ public class DialogueHandler : MonoBehaviour
    
    public void OnDialogueLineEnd()
    {
-       List<DialogueLine> dialogueList = UIManager.Instance.characterInfo.dialogueList;
+       List<DialogueLine> dialogueList = UiManager.Instance.characterInfo.dialogueList;
        
    }
 
    //au moment ou on lance le dialogue avec le minion
    public void startDialogue(CharacterInfo characterInfo)
    {
-       UIManager.Instance.dialogueBoxText.text = "";
+       UiManager.Instance.dialogueBoxText.text = "";
        this.characterInfo = characterInfo;
        currentDialogueIdx = 0;
-       UIManager.Instance.canvas.SetActive(true);
-       UIManager.Instance.characterInfo = characterInfo;
-       UIManager.Instance.DisplayDialogue(characterInfo.dialogueList[currentDialogueIdx]);
+       UiManager.Instance.canvas.SetActive(true);
+       UiManager.Instance.characterInfo = characterInfo;
+       UiManager.Instance.DisplayDialogue(characterInfo.dialogueList[currentDialogueIdx]);
    }
    
    //gére le comportement du bouton continue, est a appeler au onclick du bouton continuer
@@ -42,17 +42,17 @@ public class DialogueHandler : MonoBehaviour
        {
            case DialogueLine.DialogueType.Dialogue:
                currentDialogueIdx = characterInfo.dialogueList[currentDialogueIdx].nextLineIndex;
-               UIManager.Instance.DisplayDialogue(characterInfo.dialogueList[currentDialogueIdx]);
+                UiManager.Instance.DisplayDialogue(characterInfo.dialogueList[currentDialogueIdx]);
                break;
            case DialogueLine.DialogueType.BadEnd:
-               UIManager.Instance.gameObject.SetActive(false);
-               Player.instance.canMove = true;
-               Player.instance.canInteract = true;
+                UiManager.Instance.gameObject.SetActive(false);
+               //Player.instance.canMove = true;
+               //Player.instance.canInteract = true;
                break;
            case DialogueLine.DialogueType.GoodEnd:
-               UIManager.Instance.gameObject.SetActive(false);
-               Player.instance.canMove = true;
-               Player.instance.canInteract = true;
+                UiManager.Instance.gameObject.SetActive(false);
+               //Player.instance.canMove = true;
+               //Player.instance.canInteract = true;
                break;
            default:
                break;
@@ -62,6 +62,6 @@ public class DialogueHandler : MonoBehaviour
    public void Choicemaker(int choiceParam)
    {
        currentDialogueIdx = choiceParam;
-       UIManager.Instance.DisplayDialogue(characterInfo.dialogueList[currentDialogueIdx]);
+        UiManager.Instance.DisplayDialogue(characterInfo.dialogueList[currentDialogueIdx]);
    }
 }

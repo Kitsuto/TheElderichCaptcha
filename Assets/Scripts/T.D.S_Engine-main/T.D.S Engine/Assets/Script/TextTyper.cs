@@ -21,7 +21,7 @@ public class TextTyper : MonoBehaviour
             yield return new WaitForSeconds(speed);
         }
 
-        UIManager.Instance.onTextDisplayEnd();
+        UiManager.Instance.onTextDisplayEnd();
     }
     
     //gère le commencement du text
