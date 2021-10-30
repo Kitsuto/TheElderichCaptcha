@@ -14,6 +14,12 @@ public class DiqlogueHandle : MonoBehaviour
      public GameObject textBox;
 
      public int integer;
+
+     public Button bouton;
+
+     public Sprite[] portraitList;
+
+     public Image portrait;
  
      void Start()
     {
@@ -32,6 +38,7 @@ public class DiqlogueHandle : MonoBehaviour
     }
     private IEnumerator BuildText(string textToWrite)
     {
+        bouton.interactable = false;
      text = textToWrite;
      textBox.SetActive(true);
      for (int integer = 0; integer < text.Length; integer++){
@@ -40,6 +47,7 @@ public class DiqlogueHandle : MonoBehaviour
          yield return new WaitForSeconds(timeLapse);
      }
      if(integer < text.Length){
+         bouton.interactable = true;
          integer = 0;
          StopCoroutine(BuildText(""));
 
@@ -57,13 +65,38 @@ public class DiqlogueHandle : MonoBehaviour
     textComponent.text = "";
     switch (sentenceIdx)
         {
+        case 1:
+            portrait.sprite = portraitList[1];
+            StartCoroutine(BuildText(sentenceList[sentenceIdx]));
+            break;
         case 6:
+            StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
+            break;
+        case 10:
+            StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
+            break;
+        case 15:
+            StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
+            break;
+        case 21:
+            StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
+            break;
+        case 28:
+            StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
+            break;
+        case 33:
             StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
             break;
         default:
             StartCoroutine(BuildText(sentenceList[sentenceIdx]));
             break;
         }  
+    }
+
+    public void RestartTextAt(int idx)
+    {
+        sentenceIdx = idx;
+        UpdateText();
     }
 
     #endregion
