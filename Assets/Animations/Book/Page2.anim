@@ -39,7 +39,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: a5524a8b7df90c24db7bb6c2b06c71e0, type: 3}
+      value: {fileID: 21300000, guid: 790890b88637d75489491b632f3b85b1, type: 3}
     attribute: m_Sprite
     path: BookSprite
     classID: 114
@@ -66,7 +66,7 @@ AnimationClip:
       customType: 28
       isPPtrCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: a5524a8b7df90c24db7bb6c2b06c71e0, type: 3}
+    - {fileID: 21300000, guid: 790890b88637d75489491b632f3b85b1, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

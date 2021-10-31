@@ -13,6 +13,8 @@ public class DiqlogueHandle : MonoBehaviour
 
     [SerializeField] private Animator book;
 
+    [SerializeField] private GameObject objectList;
+
      public GameObject textBox;
 
      public int integer;
@@ -26,6 +28,7 @@ public class DiqlogueHandle : MonoBehaviour
      void Start()
     {
         StartCoroutine(BuildText(sentenceList[sentenceIdx]));
+        objectList.SetActive(false);
     }
  
     private IEnumerator BuildTextEnd(string textToWrite)
@@ -82,6 +85,7 @@ public class DiqlogueHandle : MonoBehaviour
             case 6:
                 portrait.sprite = portraitList[1];
                 StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
+                objectList.SetActive(true);
                 break;
 
 
@@ -94,6 +98,7 @@ public class DiqlogueHandle : MonoBehaviour
                 StartCoroutine(BuildText(sentenceList[sentenceIdx]));
                 break;
             case 10:
+                objectList.SetActive(true);
                 portrait.sprite = portraitList[1];
                 StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
                 break;
@@ -112,6 +117,7 @@ public class DiqlogueHandle : MonoBehaviour
                 StartCoroutine(BuildText(sentenceList[sentenceIdx]));
                 break;
             case 15:
+                objectList.SetActive(true);
                 portrait.sprite = portraitList[1];
                 StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
                 break;
@@ -134,6 +140,7 @@ public class DiqlogueHandle : MonoBehaviour
                 StartCoroutine(BuildText(sentenceList[sentenceIdx]));
                 break;
             case 22:
+                objectList.SetActive(true);
                 portrait.sprite = portraitList[1];
                 StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
                 break;
@@ -168,6 +175,7 @@ public class DiqlogueHandle : MonoBehaviour
                 StartCoroutine(BuildText(sentenceList[sentenceIdx]));
                 break;
             case 29:
+                objectList.SetActive(true);
                 portrait.sprite = portraitList[1];
                 StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
                 break;
@@ -186,6 +194,7 @@ public class DiqlogueHandle : MonoBehaviour
 
     public void RestartTextAt(int idx)
     {
+        objectList.SetActive(false);
         sentenceIdx = idx;
         UpdateText();
     }
