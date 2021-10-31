@@ -156,16 +156,15 @@ public class DiqlogueHandle : MonoBehaviour
                 break;
             case 26:
                 portrait.sprite = portraitList[9];
-                book.SetInteger("Page", 4);
                 StartCoroutine(BuildText(sentenceList[sentenceIdx]));
                 break;
             case 27:
-                book.SetInteger("Page", 5);
+                book.SetInteger("Page", 4);
                 StartCoroutine(BuildText(sentenceList[sentenceIdx]));
                 break;
             case 28:
                 portrait.sprite = portraitList[1];
-                book.SetInteger("Page", 6);
+                book.SetInteger("Page", 5);
                 StartCoroutine(BuildText(sentenceList[sentenceIdx]));
                 break;
             case 29:
