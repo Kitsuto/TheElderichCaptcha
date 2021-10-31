@@ -11,6 +11,8 @@ public class DiqlogueHandle : MonoBehaviour
      public string[] sentenceList;
      private int sentenceIdx = 0;
 
+    [SerializeField] private Animator book;
+
      public GameObject textBox;
 
      public int integer;
@@ -70,24 +72,57 @@ public class DiqlogueHandle : MonoBehaviour
             StartCoroutine(BuildText(sentenceList[sentenceIdx]));
             break;
         case 6:
+            portrait.sprite = portraitList[1];
             StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
             break;
         case 10:
+            portrait.sprite = portraitList[1];
             StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
             break;
         case 15:
+            portrait.sprite = portraitList[1];
             StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
             break;
         case 21:
+            portrait.sprite = portraitList[1];
             StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
             break;
+        case 22:
+            book.SetInteger("Page", 1);
+            StartCoroutine(BuildText(sentenceList[sentenceIdx]));
+            break;
+        case 23:
+            book.SetInteger("Page", 2);
+            StartCoroutine(BuildText(sentenceList[sentenceIdx]));
+            break;
+
+        case 24:
+                book.SetInteger("Page", 3);
+                StartCoroutine(BuildText(sentenceList[sentenceIdx]));
+                break;
+        case 25:
+                book.SetInteger("Page", 4);
+                StartCoroutine(BuildText(sentenceList[sentenceIdx]));
+                break;
+        case 26:
+                book.SetInteger("Page", 5);
+                StartCoroutine(BuildText(sentenceList[sentenceIdx]));
+                break;
+        case 27:
+                book.SetInteger("Page", 6);
+                StartCoroutine(BuildText(sentenceList[sentenceIdx]));
+                break;
+
         case 28:
+            portrait.sprite = portraitList[1];
             StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
             break;
         case 33:
+            portrait.sprite = portraitList[1];
             StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
             break;
         default:
+            portrait.sprite = portraitList[1];
             StartCoroutine(BuildText(sentenceList[sentenceIdx]));
             break;
         }  
