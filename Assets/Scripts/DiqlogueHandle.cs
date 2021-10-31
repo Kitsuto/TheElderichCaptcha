@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DiqlogueHandle : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class DiqlogueHandle : MonoBehaviour
      public Sprite[] portraitList;
 
      public Image portrait;
+
+     public int SceneChanger = 0;
  
      void Start()
     {
@@ -206,6 +209,7 @@ public class DiqlogueHandle : MonoBehaviour
             case 34:
                 portrait.sprite = portraitList[1];
                 StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
+                StartCoroutine(endsequence());
                 break;
 
         default:
@@ -228,6 +232,11 @@ public class DiqlogueHandle : MonoBehaviour
         objectList.SetActive(false);
         sentenceIdx = idx;
         UpdateText();
+    }
+
+    public IEnumerator endsequence(){
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(3);
     }
 
     #endregion
