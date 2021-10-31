@@ -67,62 +67,119 @@ public class DiqlogueHandle : MonoBehaviour
     textComponent.text = "";
     switch (sentenceIdx)
         {
-        case 1:
-            portrait.sprite = portraitList[1];
-            StartCoroutine(BuildText(sentenceList[sentenceIdx]));
-            break;
-        case 6:
-            portrait.sprite = portraitList[1];
-            StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
-            break;
-        case 10:
-            portrait.sprite = portraitList[1];
-            StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
-            break;
-        case 15:
-            portrait.sprite = portraitList[1];
-            StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
-            break;
-        case 21:
-            portrait.sprite = portraitList[1];
-            StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
-            break;
-        case 22:
-            book.SetInteger("Page", 1);
-            StartCoroutine(BuildText(sentenceList[sentenceIdx]));
-            break;
-        case 23:
-            book.SetInteger("Page", 2);
-            StartCoroutine(BuildText(sentenceList[sentenceIdx]));
-            break;
+            case 1:
+                portrait.sprite = portraitList[8];
+                StartCoroutine(BuildText(sentenceList[sentenceIdx]));
+                break;
+            case 4:
+                portrait.sprite = portraitList[14];
+                StartCoroutine(BuildText(sentenceList[sentenceIdx]));
+                break;
+            case 5:
+                portrait.sprite = portraitList[5];
+                StartCoroutine(BuildText(sentenceList[sentenceIdx]));
+                break;
+            case 6:
+                portrait.sprite = portraitList[1];
+                StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
+                break;
 
-        case 24:
+
+            case 7:
+                portrait.sprite = portraitList[3];
+                StartCoroutine(BuildText(sentenceList[sentenceIdx]));
+                break;
+            case 9:
+                portrait.sprite = portraitList[8];
+                StartCoroutine(BuildText(sentenceList[sentenceIdx]));
+                break;
+            case 10:
+                portrait.sprite = portraitList[1];
+                StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
+                break;
+
+
+            case 11:
+                portrait.sprite = portraitList[0];
+                StartCoroutine(BuildText(sentenceList[sentenceIdx]));
+                break;
+            case 13:
+                portrait.sprite = portraitList[7];
+                StartCoroutine(BuildText(sentenceList[sentenceIdx]));
+                break;
+            case 14:
+                portrait.sprite = portraitList[8];
+                StartCoroutine(BuildText(sentenceList[sentenceIdx]));
+                break;
+            case 15:
+                portrait.sprite = portraitList[1];
+                StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
+                break;
+
+
+            case 16:
+                portrait.sprite = portraitList[1];
+                StartCoroutine(BuildText(sentenceList[sentenceIdx]));
+                break;
+            case 18:
+                portrait.sprite = portraitList[9];
+                StartCoroutine(BuildText(sentenceList[sentenceIdx]));
+                break;
+            case 20:
+                portrait.sprite = portraitList[14];
+                StartCoroutine(BuildText(sentenceList[sentenceIdx]));
+                break;
+            case 21:
+                portrait.sprite = portraitList[1];
+                StartCoroutine(BuildText(sentenceList[sentenceIdx]));
+                break;
+            case 22:
+                portrait.sprite = portraitList[1];
+                StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
+                break;
+
+
+            case 23:
+                book.SetInteger("Page", 1);
+                portrait.sprite = portraitList[0];
+                StartCoroutine(BuildText(sentenceList[sentenceIdx]));
+                break;
+            case 24:
+                portrait.sprite = portraitList[3];
+                book.SetInteger("Page", 2);
+                StartCoroutine(BuildText(sentenceList[sentenceIdx]));
+                break;
+            case 25:
+                portrait.sprite = portraitList[14];
                 book.SetInteger("Page", 3);
                 StartCoroutine(BuildText(sentenceList[sentenceIdx]));
                 break;
-        case 25:
+            case 26:
+                portrait.sprite = portraitList[9];
                 book.SetInteger("Page", 4);
                 StartCoroutine(BuildText(sentenceList[sentenceIdx]));
                 break;
-        case 26:
+            case 27:
                 book.SetInteger("Page", 5);
                 StartCoroutine(BuildText(sentenceList[sentenceIdx]));
                 break;
-        case 27:
+            case 28:
+                portrait.sprite = portraitList[1];
                 book.SetInteger("Page", 6);
                 StartCoroutine(BuildText(sentenceList[sentenceIdx]));
                 break;
+            case 29:
+                portrait.sprite = portraitList[1];
+                StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
+                break;
 
-        case 28:
-            portrait.sprite = portraitList[1];
-            StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
-            break;
-        case 33:
-            portrait.sprite = portraitList[1];
-            StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
-            break;
+
+            case 34:
+                portrait.sprite = portraitList[1];
+                StartCoroutine(BuildTextEnd(sentenceList[sentenceIdx]));
+                break;
+
         default:
-            portrait.sprite = portraitList[1];
             StartCoroutine(BuildText(sentenceList[sentenceIdx]));
             break;
         }  
