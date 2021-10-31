@@ -12,8 +12,8 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
-        Minute = 7;
-        Second = 6;
+        Minute = 6;
+        Second = 66;
     }
 
     void Update()
@@ -31,7 +31,7 @@ public class Timer : MonoBehaviour
         if(Second <= 0)
         {
             Minute -= 1;
-            Second = 59;
+            Second = 66;
         }
 
         if(Minute <= 0)
