@@ -9,11 +9,15 @@ public class Timer : MonoBehaviour
     private float Chronometer;
     private int Second;
     private int Minute;
+    private int cooldownTimer;
+    private int cooldown;
 
     private void Start()
     {
         Minute = 6;
         Second = 66;
+        cooldown = 0;
+        cooldownTimer = (Minute * 60) + Second - Minute;
     }
 
     void Update()
@@ -24,6 +28,7 @@ public class Timer : MonoBehaviour
 
         if(Chronometer >= 1f)
         {
+            cooldown += 1;
             Second -= 1;
             Chronometer = 0;
         }
@@ -34,7 +39,7 @@ public class Timer : MonoBehaviour
             Second = 66;
         }
 
-        if(Minute <= 0)
+        if(cooldown >= cooldownTimer)
         {
             SceneManager.LoadScene(2);
         }
